@@ -1,3 +1,9 @@
 name: "[버그사항]"
 description: 버그발견하셨습니까?
 title: "[버그]"
+labels: "bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        버그사항 접수해주셔서 감사합니다.!
