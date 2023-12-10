@@ -1,0 +1,33 @@
+capital=64
+set_politics={
+	ruling_party=democratic
+	last_election="1933.3.5"
+	election_frequency=48
+	elections_allowed=yes
+}
+set_popularities={
+	democratic=31
+	fascism=28
+	communism=21
+	neutrality=20
+}
+set_party_name={
+    ideology=neutrality
+    long_name=ger_neutrality_party_long_name
+    name=ger_neutrality_party
+}
+set_party_name={
+    ideology=democratic
+    long_name=ger_democratic_party_long_name
+    name=ger_democratic_party
+}
+set_party_name={
+    ideology=fascism
+    long_name=ger_fascism_party_long_name
+    name=ger_fascism_party
+}
+set_party_name={
+    ideology=communism
+    long_name=ger_communism_party_long_name
+    name=ger_communism_party
+}
