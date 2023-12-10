@@ -46,7 +46,7 @@ ideologies={
 		types={
 			conservative_democracy_subtype={}
 		}
-		dynamic_faction_names={
+		dynamic_faction_names={	#보수민주주의
 			"FACTION_NAME_CONSERVATIVE_DEMOCRACY_1"
 			"FACTION_NAME_CONSERVATIVE_DEMOCRACY_2"
 			"FACTION_NAME_CONSERVATIVE_DEMOCRACY_3"
