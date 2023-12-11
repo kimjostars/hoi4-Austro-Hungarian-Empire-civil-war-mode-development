@@ -1,0 +1,66 @@
+add_namespace=north_ger
+
+country_event={	#북독일 국가 이벤트
+	id=north_ger.1	#최종선거결과
+	title=north_ger.1.title	#제목
+	desc=north_ger.1.description	#설명
+	is_triggered_only = yes
+	trigger={
+		original_tag=ger
+	}
+	option={	#선택창
+		name=north_ger.1.a
+		ai_chance={
+			base=2
+		}
+		set_politics={
+			ruling_party=neutrality
+			elections_allowed=no
+			election_frequency=48
+			long_name=ger_neutrality_party_long_name
+			name=ger_neutrality_party
+		}
+		
+	}
+	option={	#선택창
+		name=north_ger.1.b
+		ai_chance={
+			base=95
+		}
+		set_politics={
+			ruling_party=fascism
+			elections_allowed=no
+			election_frequency=48
+			long_name=ger_fascism_party_long_name
+			name=ger_fascism_party
+		
+		}
+	}
+	option={	#선택창
+		name=north_ger.1.c
+		ai_chance={
+			base=3
+		}
+		set_politics={
+			ruling_party=democratic
+			elections_allowed=no
+			election_frequency=48
+			long_name=ger_democratic_party_long_name
+			name=ger_democratic_party
+		}
+	}
+	option={	#선택창
+		name=north_ger.1.d
+		ai_chance={
+			base=1
+		}
+		set_politics={
+			ruling_party=communism
+			elections_allowed=no
+			election_frequency=48
+			long_name=ger_communism_party_long_name
+			name=ger_communism_party
+		}
+	}
+}
+	
