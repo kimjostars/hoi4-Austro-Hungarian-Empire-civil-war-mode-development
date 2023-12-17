@@ -9,258 +9,170 @@ focus_tree={
 	}
 	default=no
 	focus={
-		id=ger_one	#첫번재정치중점
+		id=ger_one
 		icon=GFX_1
 		cost=2
 		ai_will_do={
-            factor=10
-        }
-		search_filters={FOCUS_FILTER_HISTORICAL}
-        x=12
-        y=0
-		completion_reward={
-			country_event=north_ger.1
-			add_political_power=5
+			factor=100
 		}
-	}
-	focus={
-		id=ger_neutrality_rute_start	#왕정루트시작
-		icon=GFX_2
-		cost=3
-		ai_will_do={
-			factor=0
-		}
-		available={
-			date>1936.01.14
-			has_government=neutrality
-		}
-        x=16
-        y=1
-		completion_reward={
+		available_if_capitulated=no
+		complete_reward={
 			add_political_power=10
-			add_stability=0.14
-			add_popularity={
-				ideology=neutrality
-				popularity=0.08
-			}
+			country_event=north_ger.1
 		}
-		prerequisite={focus=ger_one}
-		mutually_exclusive={focus=ger_fascism_rute_start	focus=ger_democratic_rute_start	focus=ger_communism_rute_start}
+		x=20
+		y=0
 	}
 	focus={
-		id=ger_fascism_rute_start	#파시루트시작
+		id=ger_paternal_autocrat_root_start
 		icon=GFX_2
-		cost=3
+		cost=1
 		ai_will_do={
-			factor=10
-		}
-		search_filters={FOCUS_FILTER_HISTORICAL}
-		available={
-			date>1936.01.14
-			has_government=fascism
-		}
-		x=13
-		y=1
-		completion_reward={
-			add_political_power=17
-			add_stability=0.16
-			add_popularity={
-				ideology=fascism
-				popularity=0.08
-			}
-			add_popularity={
-				ideology=communism
-				popularity=0.05
-			}
-		}
-		prerequisite={focus=ger_one}
-		mutually_exclusive={focus=ger_neutrality_rute_start	focus=ger_democratic_rute_start	focus=ger_communism_rute_start}
-	}
-	focus={
-		id=ger_democratic_rute_start	#민주루트시작
-		icon=GFX_2
-		cost=3
-		ai_will_do={
-			factor=0
+			factor=100
 		}
 		available={
-			date>1936.01.14
-			has_government=democratic
+			has_country_flag=ger_boot_1
 		}
-		x=11
-		y=1
-		completion_reward={
-			add_political_power=7
-			add_stability=0.17
-			add_popularity={
-				ideology=democratic
-				popularity=0.1
+		complete_reward={
+			set_politics={
+				ruling_party=paternal_autocrat
+				elections_allowed=no
+				election_frequency=48
+				long_name=ger_paternal_autocrat_party_long_name
+				name=ger_paternal_autocrat_party
 			}
 		}
+		x=26
+		y=1
 		prerequisite={focus=ger_one}
-		mutually_exclusive={focus=ger_neutrality_rute_start	focus=ger_fascism_rute_start	focus=ger_communism_rute_start}
+		mutually_exclusive={focus=ger_national_populist_root_start	focus=ger_market_liberal_root_start	focus=ger_radical_socialist_root_start}
 	}
 	focus={
-		id=ger_communism_rute_start	#공산루트시작
+		id=ger_national_populist_root_start
 		icon=GFX_2
-		cost=3
+		cost=1
 		ai_will_do={
-			factor=0
+			factor=100
 		}
 		available={
-			date>1936.01.14
-			has_government=communism
+			has_country_flag=ger_boot_2
 		}
-		x=8
+		complete_reward={
+			set_politics={
+				ruling_party=national_populist
+				elections_allowed=no
+				election_frequency=48
+				long_name=ger_national_populist_party_long_name
+				name=ger_national_populist_party
+			}
+		}
+		x=22
 		y=1
-		completion_reward={
-			add_political_power=15
-			add_stability=0.15
-			add_popularity={
-				ideology=communism
-				popularity=0.08
-			}
-			add_popularity={
-				ideology=fascism
-				popularity=0.05
-			}
-		}
 		prerequisite={focus=ger_one}
-		mutually_exclusive={focus=ger_neutrality_rute_start	focus=ger_fascism_rute_start	focus=ger_democratic_rute_start}
+		mutually_exclusive={focus=ger_paternal_autocrat_root_start	focus=ger_market_liberal_root_start	focus=ger_radical_socialist_root_start}
 	}
 	focus={
-		id=ger_fascism_rute_secount	#공산주의자숙청
+		id=ger_market_liberal_root_start
+		icon=GFX_2
+		cost=1
+		ai_will_do={
+			factor=100
+		}
+		available={
+			has_country_flag=ger_boot_3
+		}
+		complete_reward={
+			set_politics={
+				ruling_party=market_liberal
+				elections_allowed=no
+				election_frequency=48
+				long_name=ger_market_liberal_party_long_name
+				name=ger_market_liberal_party
+			}
+		}
+		x=18
+		y=1
+		prerequisite={focus=ger_one}
+		mutually_exclusive={focus=ger_national_populist_root_start	focus=ger_paternal_autocrat_root_start	focus=ger_radical_socialist_root_start}
+	}
+	focus={
+		id=ger_radical_socialist_root_start
+		icon=GFX_2
+		cost=1
+		ai_will_do={
+			factor=100
+		}
+		available={
+			has_country_flag=ger_boot_4
+		}
+		complete_reward={
+			set_politics={
+				ruling_party=radical_socialist
+				elections_allowed=no
+				election_frequency=48
+				long_name=ger_radical_socialist_party_long_name
+				name=ger_radical_socialist_party
+			}
+		}
+		x=14
+		y=1
+		prerequisite={focus=ger_one}
+		mutually_exclusive={focus=ger_national_populist_root_start	focus=ger_market_liberal_root_start	focus=ger_paternal_autocrat_root_start}
+	}
+	focus={
+		id=ger_national_populist_root_secount
 		icon=GFX_3
-		cost=4
+		cost=3
 		ai_will_do={
-			factor=10
+			factor=90
 		}
-		search_filters={FOCUS_FILTER_HISTORICAL}
-		available={
-			has_political_power>30
+		complete_reward={
+			add_popularity={
+				ideology=paternal_autocrat
+				popularity=0.35
+			}
+			add_political_power=25
+			add_stability=0.2
 		}
-		x=13
+		x=26
 		y=2
-		completion_reward={
-			add_political_power=17
-			add_popularity={
-				ideology=fascism
-				popularity=0.05
-			}
-			add_popularity={
-				ideology=communism
-				popularity=-0.17
-			}
-		}
-		prerequisite={focus=ger_fascism_rute_start}
+		prerequisite={focus=ger_paternal_autocrat_root_start}
 	}
-	focus={	#북독일  파시즘 지도자결정1
-		id=ger_fascism_rute_three_one
+	focus={
+		id=ger_national_populist_root_tree_one
 		icon=GFX_4
 		cost=3
 		ai_will_do={
-			factor=0
+			factor=90
 		}
-		x=13
+		available={
+			has_country_flag=ger_intervene_1
+		}
+		complete_reward={
+			add_political_power=-20
+		}
+		x=26
 		y=3
-		completion_reward={	#파시즘 지도자 변경으로 할예정
-			add_political_power=35
-			add_popularity={
-				ideology=fascism
-				popularity=0.05
-			}
-		}
-		prerequisite={focus=ger_fascism_rute_secount}
-		mutually_exclusive={focus=ger_fascism_rute_three_two}
+		prerequisite={focus=ger_national_populist_root_secount}
+		mutually_exclusive={focus=ger_national_populist_root_tree_two}
 	}
-	focus={	#북독일  파시즘 지도자결정2
-		id=ger_fascism_rute_three_two
+	focus={
+		id=ger_national_populist_root_tree_two
 		icon=GFX_4
 		cost=3
 		ai_will_do={
-			factor=0
+			factor=90
 		}
-		x=15
+		available={
+			has_country_flag=ger_intervene_2
+		}
+		complete_reward={
+			add_political_power=-15
+		}
+		x=28
 		y=3
-		completion_reward={	#파시즘 지도자 변경으로 할예정
-			add_political_power=35
-			add_popularity={
-				ideology=fascism
-				popularity=0.07
-			}
-		}
-		prerequisite={focus=ger_fascism_rute_secount}
-		mutually_exclusive={focus=ger_fascism_rute_three_one}
-	}
-	focus={
-		id=ger_democratic_rute_secount_one	#사민당
-		icon=GFX_3
-		cost=4
-		ai_will_do={
-			factor=0
-		}
-		x=11
-		y=3
-		completion_reward={
-			set_party_name={
-				ideology=democratic
-				long_name=ger_democratic_samin_party_long_name
-				name=ger_democratic_samin_party
-			}
-			set_party_name={
-				ideology=neutrality
-				long_name=ger_democratic_juo_party_long_name
-				name=ger_democratic_juo_party
-			}
-		}
-		prerequisite={focus=ger_democratic_rute_start}
-		mutually_exclusive={focus=ger_democratic_rute_secount_two}
-	}
-	focus={
-		id=ger_democratic_rute_secount_two	#중앙당
-		icon=GFX_3
-		cost=4
-		ai_will_do={
-			factor=0
-		}
-		x=9
-		y=3
-		completion_reward={
-			set_party_name={
-				ideology=democratic
-				long_name=ger_democratic_juo_party_long_name
-				name=ger_democratic_juo_party
-			}
-			set_party_name={
-				ideology=neutrality
-				long_name=ger_democratic_samin_party_long_name
-				name=ger_democratic_samin_party
-			}
-		}
-		prerequisite={focus=ger_democratic_rute_start}
-		mutually_exclusive={focus=ger_democratic_rute_secount_one}
-	}
-	focus={	#반대파숙청
-		id=ger_communism_rute_secount
-		icon=GFX_3
-		cost=3
-		ai_will_do={
-			factor=0
-		}
-		x=8
-		y=2
-		completion_reward={
-			add_political_power=17
-			add_popularity={
-				ideology=fascism
-				popularity=-0.07
-			}
-			add_popularity={
-				ideology=communism
-				popularity=0.13
-			}		
-		}
-		prerequisite={focus=ger_communism_rute_start}
+		prerequisite={focus=ger_national_populist_root_secount}
+		mutually_exclusive={focus=ger_national_populist_root_tree_one}
 	}
 }
 continuous_focus_position={x=10	y=500}
