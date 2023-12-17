@@ -11,11 +11,9 @@
   ger_radical_socialist_root_start:0  "공산당의 집권"
   ger_radical_socialist_root_start_desc:0 "선거에서 공산당이 집권하였습니다."
   ger_national_populist_root_secount:0  "공산주의자 숙청"
-  ger_national_populist_root_secount_desc:0 "연방에 혼란을 야기하는 공산주의자들을 숙청하여 국가를 바로잡아야합니다.\n공산주의자들을 숙청하는 디시전이 추가됩니다."
-  ger_national_populist_root_three_one:0  "???의 집권"
-  ger_national_populist_root_three_one_desc:0 "???가 북독일 연방의 총리가 되었습니다."
-  ger_national_populist_root_three_two:0  "???2의 권력유지"
-  ger_national_populist_root_three_two_desc:0 "???2총리가 권력을 유지에 성공하였습니다."
+  ger_national_populist_root_secount_desc:0 "연방에 혼란을 야기한 공산주의자들을 숙청하여 국가를 바로잡아야합니다.\n공산주의자들을 숙청하는 일련의 디시전이 추가됩니다."
+  ger_national_populist_root_three:0  "연방단결!"
+  ger_national_populist_root_three_desc:0 "현재지역별로 분열되어있는 연방을 하나로 단결시켜야합니다!"
   ger_democratic_root_secount_one:0 "사민당의 단독집권"
   ger_democratic_root_secount_one_desc:0  "사민당이 단독으로 집권하는것을 성공하였습니다"
   ger_democratic_root_secount_two:0 "중앙당의 단독집권"
@@ -28,6 +26,8 @@
   ger_paternal_autocrat_root_tree_one_desc:0  "구오스트리아-헝가리제국일대에서 벌어진 중유럽대전에 개입하여 이득을 얻어야합니다.\n중유럽대전에 개입하는 일련의 디시전이 열립니다."
   ger_paternal_autocrat_root_tree_two:0 "중유럽대전 미개입선언"
   ger_paternal_autocrat_root_tree_two_desc:0 "중유럽대전에 개입하지않는다면 우리는 손해를 얻지않을것입니다"
+  ger_paternal_autocrat_root_tree_one:0 "자치도 감소"
+  ger_paternal_autocrat_root_tree_one_desc:0  "각 연방구성원들의 높은자치는 국가를 분열시킵니다.\n따라서 우리는 연방구성원들의 자치정도를 낮추어야합니다."
 
   ##북독일  컨트리  이벤트##
   north_ger.1.title:0 "1936년 연방의원선거"
@@ -65,6 +65,8 @@
   communism_kill_desc:0 "국가의 해악인 공산주의자들의 세력을 숙청,감소시켜야합니다."
   communist_disgrace:0  "공산주의자 공개망신"
   communist_disgrace_desc:0 "공산주의자들에게 망신주어 공산주의의 인기를 감소시킵니다."
+  national_populist_kill:0  "극우주의자 숙청"
+  national_populist_kill_desc:0 "국가의 좋은점이 없는 극우주의자들을 숙청하여야합니다."
 
   ##이념##
   social_democrat:0 "사회민주주의"
