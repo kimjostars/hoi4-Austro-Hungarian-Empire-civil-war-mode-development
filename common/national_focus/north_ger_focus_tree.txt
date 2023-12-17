@@ -143,7 +143,7 @@ focus_tree={
 		icon=GFX_4
 		cost=3
 		ai_will_do={
-			factor=90
+			factor=50
 		}
 		available={
 			has_country_flag=ger_intervene_1
@@ -156,12 +156,24 @@ focus_tree={
 		prerequisite={focus=ger_paternal_autocrat_root_secount}
 		mutually_exclusive={focus=ger_paternal_autocrat_root_tree_two}
 	}
+	focus = {
+		id = ger_paternal_autoctat_root_four
+		icon = GFX_5
+		cost = 3
+		x = 26
+		y = 4
+		completion_reward = {
+			add_political_power = -15
+			add_stability = 0.025
+		}
+		prerequisite = {focus = ger_paternal_autocrat_root_tree_one	or focus=ger_paternal_autocrat_root_tree_two}
+	}
 	focus={
 		id=ger_paternal_autocrat_root_tree_two
 		icon=GFX_4
 		cost=3
 		ai_will_do={
-			factor=90
+			factor=50
 		}
 		available={
 			has_country_flag=ger_intervene_2
@@ -175,7 +187,31 @@ focus_tree={
 		mutually_exclusive={focus=ger_paternal_autocrat_root_tree_one}
 	}
 	focus={
-		id=
+		id=ger_national_populist_root_secount
+		icon=GFX_3
+		cost=3
+		ai_will_do={
+			factor=90
+		}
+		completion_reward = {
+			add_political_power = 30
+			add_stability=0.1
+		}
+		x=22
+		y=2
+		prerequisite = {focus=ger_national_populist_kill_root_start}
+	}
+	focus = {
+		id = ger_national_populist_root_tree
+		icon = GFX_4
+		cost = 3
+		completion_reward = {
+			add_political_power = 10
+			add_stability = 0.125
+		}
+		x = 22
+		y = 3
+		prerequisite = {focus=ger_national_populist_root_secount}
 	}
 }
 continuous_focus_position={x=10	y=500}
