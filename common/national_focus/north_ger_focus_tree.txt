@@ -120,7 +120,7 @@ focus_tree={
 		mutually_exclusive={focus=ger_national_populist_root_start	focus=ger_market_liberal_root_start	focus=ger_paternal_autocrat_root_start}
 	}
 	focus={
-		id=ger_national_populist_root_secount
+		id=ger_paternal_autocrat_root_secount
 		icon=GFX_3
 		cost=3
 		ai_will_do={
@@ -139,7 +139,7 @@ focus_tree={
 		prerequisite={focus=ger_paternal_autocrat_root_start}
 	}
 	focus={
-		id=ger_national_populist_root_tree_one
+		id=ger_paternal_autocrat_root_tree_one
 		icon=GFX_4
 		cost=3
 		ai_will_do={
@@ -153,11 +153,11 @@ focus_tree={
 		}
 		x=26
 		y=3
-		prerequisite={focus=ger_national_populist_root_secount}
-		mutually_exclusive={focus=ger_national_populist_root_tree_two}
+		prerequisite={focus=ger_paternal_autocrat_root_secount}
+		mutually_exclusive={focus=ger_paternal_autocrat_root_tree_two}
 	}
 	focus={
-		id=ger_national_populist_root_tree_two
+		id=ger_paternal_autocrat_root_tree_two
 		icon=GFX_4
 		cost=3
 		ai_will_do={
@@ -171,8 +171,11 @@ focus_tree={
 		}
 		x=28
 		y=3
-		prerequisite={focus=ger_national_populist_root_secount}
-		mutually_exclusive={focus=ger_national_populist_root_tree_one}
+		prerequisite={focus=ger_paternal_autocrat_root_secount}
+		mutually_exclusive={focus=ger_paternal_autocrat_root_tree_one}
+	}
+	focus={
+		id=
 	}
 }
 continuous_focus_position={x=10	y=500}
