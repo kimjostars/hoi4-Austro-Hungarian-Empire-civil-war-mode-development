@@ -1,12 +1,12 @@
-communism_kill={
-    communist_disgrace={
+radical_socialist_kill={
+    radical_socialist_disgrace={
 		cost=20
 		available={
-			communism>0.1
+			radical_socialist>0.05
 		}
 		complete_effect={
 			add_popularity={
-				ideology=communism
+				ideology=national_populist
 				popularity=-0.025
 			}
 			add_stability=-0.025
