@@ -6,6 +6,7 @@ radical_socialist_kill={
 	visible={
 		has_completed_focus=ger_national_populist_rute_secount
 		date<1940.01.01
+		radical_socialist>0.15
 	}
 	available={
 		has_government=national_populist
@@ -19,6 +20,7 @@ national_populist_kill={
 	visible = {
 		has_completed_focus = ger_radical_socialist_root_secount
 		date<1940.01.01
+		national_populist>0.15
 	}
 	available = {
 		has_government = radical_socialist
