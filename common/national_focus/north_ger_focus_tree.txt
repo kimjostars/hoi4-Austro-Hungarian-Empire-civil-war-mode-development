@@ -149,7 +149,8 @@ focus_tree={
 			has_country_flag=ger_intervene_1
 		}
 		complete_reward={
-			add_political_power=-20
+			add_political_power=-10
+			add_war_support=0.2
 		}
 		x=26
 		y=3
