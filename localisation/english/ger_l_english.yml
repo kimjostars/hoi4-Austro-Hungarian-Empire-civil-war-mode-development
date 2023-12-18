@@ -26,8 +26,8 @@
   ger_paternal_autocrat_root_tree_one_desc:0  "구오스트리아-헝가리제국일대에서 벌어진 중유럽대전에 개입하여 이득을 얻어야합니다.\n중유럽대전에 개입하는 일련의 디시전이 열립니다."
   ger_paternal_autocrat_root_tree_two:0 "중유럽대전 미개입선언"
   ger_paternal_autocrat_root_tree_two_desc:0 "중유럽대전에 개입하지않는다면 우리는 손해를 얻지않을것입니다"
-  ger_paternal_autocrat_root_tree:0 "자치도 감소"
-  ger_paternal_autocrat_root_tree_desc:0  "각 연방구성원들의 높은자치는 국가를 분열시킵니다.\n따라서 우리는 연방구성원들의 자치정도를 낮추어야합니다.\n연방구성원들의 자치도을 조절하는디시전이 개방됩니다"
+  ger_paternal_autocrat_root_four:0 "자치도 감소"
+  ger_paternal_autocrat_root_four_desc:0  "각 연방구성원들의 높은자치는 국가를 분열시킵니다.\n따라서 우리는 연방구성원들의 자치정도를 낮추어야합니다."
 
   ##북독일  컨트리  이벤트##
   north_ger.1.title:0 "1936년 연방의원선거"
