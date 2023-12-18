@@ -14,6 +14,10 @@ country_event={	#북독일 36년선거 이벤트
 			base=25
 		}
 		set_country_flag=ger_boot_1
+		add_popularity={
+			ideology=paternal_autocrat
+			popularity=0.075
+		}
 	}
 	option={	#선택창
 		name=north_ger.1.b
@@ -21,6 +25,10 @@ country_event={	#북독일 36년선거 이벤트
 			base=25
 		}
 		set_country_flag=ger_boot_2
+		add_popularity={
+			ideology=national_populist
+			popularity=0.075
+		}
 	}
 	option={	#선택창
 		name=north_ger.1.c
@@ -28,6 +36,10 @@ country_event={	#북독일 36년선거 이벤트
 			base=25
 		}
 		set_country_flag=ger_boot_3
+		add_popularity={
+			ideology=maket_liberal
+			popularity=0.075
+		}
 	}
 	option={	#선택창
 		name=north_ger.1.d
@@ -35,6 +47,10 @@ country_event={	#북독일 36년선거 이벤트
 			base=25
 		}
 		set_country_flag=ger_boot_4
+		add_popularity={
+			ideology=radical_socialist
+			popularity=0.075
+		}
 	}
 }
 
