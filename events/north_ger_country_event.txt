@@ -54,7 +54,7 @@ country_event={	#북독일 36년선거 이벤트
 	}
 }
 
-country_event={	#중유럽대전 개입여부 결정 이벤트
+country_event={	#후견전제주의 중유럽대전 개입여부 결정 이벤트
 	id=north_ger.2
 	title=north_ger.2.title
 	desc=north_ger.2.description
