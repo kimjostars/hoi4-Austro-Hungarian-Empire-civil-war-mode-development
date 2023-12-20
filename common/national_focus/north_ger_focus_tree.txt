@@ -23,10 +23,10 @@ focus_tree={
 		x=25
 		y=0
 	}
-	focus={
+	focus={	#후견전제주의 재제작 필요 그로인해 비용늘림
 		id=ger_paternal_autocrat_root_start
 		icon=GFX_2
-		cost=1
+		cost=100
 		ai_will_do={
 			factor=100
 		}
@@ -42,7 +42,7 @@ focus_tree={
 				name=ger_paternal_autocrat_party
 			}
 		}
-		x=31
+		x=34
 		y=1
 		prerequisite={focus=ger_one}
 		mutually_exclusive={focus=ger_national_populist_root_start	focus=ger_market_liberal_root_start	focus=ger_radical_socialist_root_start}
@@ -138,7 +138,7 @@ focus_tree={
 			add_political_power=25
 			add_stability=0.2
 		}
-		x=31
+		x=34
 		y=2
 		prerequisite={focus=ger_paternal_autocrat_root_start}
 	}
@@ -156,7 +156,7 @@ focus_tree={
 			add_political_power=-10
 			add_war_support=0.2
 		}
-		x=31
+		x=34
 		y=3
 		prerequisite={focus=ger_paternal_autocrat_root_secount}
 		mutually_exclusive={focus=ger_paternal_autocrat_root_tree_two}
@@ -165,13 +165,13 @@ focus_tree={
 		id = ger_paternal_autoctat_root_four
 		icon = GFX_5
 		cost = 3
-		x = 31
+		x = 35
 		y = 4
 		completion_reward = {
 			add_political_power = -15
 			add_stability = 0.025
 		}
-		prerequisite = {focus = ger_paternal_autocrat_root_tree_one	or focus=ger_paternal_autocrat_root_tree_two}
+		prerequisite = {focus = ger_paternal_autocrat_root_tree_one	focus=ger_paternal_autocrat_root_tree_two}
 	}
 	focus={
 		id=ger_paternal_autocrat_root_tree_two
@@ -186,7 +186,7 @@ focus_tree={
 		complete_reward={
 			add_political_power=-15
 		}
-		x=33
+		x=36
 		y=3
 		prerequisite={focus=ger_paternal_autocrat_root_secount}
 		mutually_exclusive={focus=ger_paternal_autocrat_root_tree_one}
@@ -210,6 +210,9 @@ focus_tree={
 		id = ger_national_populist_root_three
 		icon = GFX_4
 		cost = 3
+		ai_will_do = {
+			factor = 90
+		}
 		completion_reward = {
 			add_political_power = 10
 			add_stability = 0.125
@@ -219,19 +222,77 @@ focus_tree={
 		prerequisite = {focus=ger_national_populist_root_secount}
 	}
 	focus = {
-		id = ger_ger_national_populist_root_three_one
-		icon = GFX_5
+		id = ger_national_populist_root_three_one
+		icon = GFX_4
 		cost = 3
 		x = 26
 		y = 3
+		ai_will_do = {
+			factor = 90
+		}
 		available = {
-			has_political_power>25
+			has_political_power	>30
 		}
 		completion_reward = {
 			add_political_power = 10
 			add_stability = 0.25
+			#전쟁지지도 추가 국민정신 추가예정
 		}
 		prerequisite = {focus = ger_national_populist_root_secount}
+	}
+	focus = {	#무력통일작전 수립
+		id = ger_national_populist_root_four_one
+		icon = GFX_5
+		cost = 7
+		x = 26
+		y = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			has_political_power >35
+			has_stability >0.2
+			has_war_support >0.2
+		}
+		completion_reward = {
+			add_political_power = 20
+			add_war_support = 0.4
+			#무력통일준비이벤트 실행
+		}
+		prerequisite = {focus = ger_national_populist_root_three}
+		mutually_exclusive = {focus = ger_national_populist_root_four_two}
+	}
+	focus = {	#평화통일준비
+		id = ger_national_populist_root_four_two
+		icon = GFX_5
+		cost = 7
+		x = 28
+		y = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			has_political_power	>20
+		}
+		completion_reward = {
+			add_political_power = -10
+			add_stability = 0.15
+			#평화통일준비이벤트 실행
+		}
+		prerequisite = {focus = ger_national_populist_root_three}
+		mutually_exclusive = {focus = ger_national_populist_root_four_one}
+	}
+	focus = {	#세계로! #외교중점
+		id = ger_national_populist_root_five
+		icon = GFX_6
+		cost = 3
+		x = 30
+		y = 6
+		ai_will_do = {
+			factor = 90
+		}
+		completion_reward = {}
+		prerequisite = {focus=ger_national_populist_root_four_one	focus=ger_national_populist_root_four_two}
 	}
 }
 continuous_focus_position={x=10	y=500}
