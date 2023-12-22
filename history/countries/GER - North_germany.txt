@@ -1,6 +1,6 @@
 capital=64
 set_politics={
-	ruling_party=authoritarian_democrat
+	ruling_party=market_liberal
 	last_election="1933.3.5"
 	election_frequency=48
 	elections_allowed=yes
