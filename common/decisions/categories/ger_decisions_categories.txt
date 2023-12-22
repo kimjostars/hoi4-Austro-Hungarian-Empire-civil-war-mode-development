@@ -26,3 +26,13 @@ national_populist_kill={
 		has_government = radical_socialist
 	}
 }
+ger_congress = {
+	icon = usa_congress
+	allowed = {
+		original_tag = ger
+	}
+
+	scripted_gui = ger_congress_decision_ui	
+
+	priority = 85
+}
