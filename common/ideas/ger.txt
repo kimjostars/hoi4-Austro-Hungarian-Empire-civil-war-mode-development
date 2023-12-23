@@ -1,0 +1,24 @@
+idea = {
+	country = {
+		victor_of_great_war = {
+			picture = GFX_1
+			allowed = {
+				original_tag = ger
+			}
+			allowed_civil_war = {
+			    always = no
+			}
+			visible = {
+				any_war_score > 65
+				##NOT = {
+					##has_completed_focus = 군대개혁중점
+				##}
+			}
+			modifier = {
+				experience_gain_army_factor = 0.03
+				offence = 0.05
+				war_support_factor = 0.05
+			}
+		}
+	}
+}
