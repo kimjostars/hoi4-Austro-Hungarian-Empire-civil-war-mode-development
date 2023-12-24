@@ -13,3 +13,25 @@ radical_socialist_kill={
 		}
 	}
 }
+national_populist_kill={
+	
+}
+ger_intervention_mandate = {
+	ger_Bribe = {
+		available = {
+			if = {
+				limit = {
+					congress_low_support_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					congress_medium_support_trigger = yes
+				}
+			}
+			else = {
+				congress_high_support_trigger = yes
+			}
+		}
+	}
+}
