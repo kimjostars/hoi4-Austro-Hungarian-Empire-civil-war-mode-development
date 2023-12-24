@@ -57,14 +57,10 @@
   ger_market_liberal_party:0  "사민,중앙당 연정"
   ger_radical_socialist_party_long_name:0 "독일공산당"
   ger_radical_socialist_party:0 "독일공산당"
-  ger_democratic_samin_party_long_name:0  "사회민주당"
-  ger_democratic_samin_party:0  "사민당"
-  ger_democratic_juo_party_long_name:0  "중앙당"
-  ger_democratic_juo_party:0  "중앙당"
-  ger_neutrality_juo_party_long_name:0  "중앙당"
-  ger_neutrality_juo_party:0  "중앙당"
-  ger_neutrality_samin_party_long_name:0 "사회민주당"
-  ger_neutrality_samin_party:0  "사민당"
+  ger_social_democrat_party_long_name:0  "사민당,중앙당연립정부:사회민주당"
+  ger_social_democrat_party:0  "사민,중앙당 연정:사민당"
+  ger_authoritarian_democrat_party_long_name:0  "사민당,중앙당연립정부:중앙당"
+  ger_authoritarian_democrat_party:0  "사민,중앙당 연정:중앙당"
   
   ##디시전##
   communism_kill:0  "공산주의자 숙청"
