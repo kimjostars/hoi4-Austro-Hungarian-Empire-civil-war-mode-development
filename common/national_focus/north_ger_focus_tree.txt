@@ -342,7 +342,7 @@ focus_tree={
 	}
 	focus = {	#극단주의금지
 		id = ger_maket_liberal_root_thrre_one
-		icon = GFX_3
+		icon = GFX_4
 		cost = 4
 		x = 22
 		y = 3
@@ -372,7 +372,7 @@ focus_tree={
 	}
 	focus = {	#왕정주의 약화
 		id = ger_maket_liberal_root_thrre_two
-		icon = GFX_3
+		icon = GFX_4
 		cost = 4
 		x = 24
 		y = 3
@@ -390,7 +390,7 @@ focus_tree={
 	}
 	focus = {	#사회문제해결
 		id = ger_maket_liberal_root_four
-		icon = GFX_4
+		icon = GFX_5
 		cost = 3
 		available = {
 			has_political_power >35
@@ -402,6 +402,36 @@ focus_tree={
 		}
 		prerequisite = {focus = ger_maket_liberal_root_thrre_one}
 		prerequisite = {focus = ger_maket_liberal_root_thrre_two}
+	}
+	focus = {	#서유럽와의 관계강화
+		id = ger_maket_liberal_root_five_one
+		icon = GFX_6
+		cost = 3
+		x = 22
+		y = 5
+		ai_will_do = {
+			factor = 70
+		}
+		completion_reward = {
+			add_political_power = 15
+			#서유럽와의 관계개선 국민정신추가예정
+		}
+		prerequisite = {focus = ger_maket_liberal_root_four}
+	}
+	focus = {	#동유럽와의 관계개선
+		id = ger_maket_liberal_root_five_two
+		icon = GFX_6
+		cost = 3
+		x = 24
+		y = 5
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_political_power = 15
+			#동유럽와의 관계개선 국민정신추가예정
+		}
+		prerequisite = {focus = ger_maket_liberal_root_four}
 	}
 }
 continuous_focus_position={x=10	y=100}
