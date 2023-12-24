@@ -20,7 +20,7 @@ focus_tree={
 			add_political_power=10
 			country_event=north_ger.1
 		}
-		x=25
+		x=26
 		y=0
 	}
 	focus={	#후견전제주의 재제작 필요 그로인해 비용늘림
@@ -70,7 +70,7 @@ focus_tree={
 				popularity=0.075
 			}
 		}
-		x=27
+		x=29
 		y=1
 		prerequisite={focus=ger_one}
 		mutually_exclusive={focus=ger_paternal_autocrat_root_start	focus=ger_market_liberal_root_start	focus=ger_radical_socialist_root_start}
@@ -93,6 +93,7 @@ focus_tree={
 				long_name=ger_market_liberal_party_long_name
 				name=ger_market_liberal_party
 			}
+			##힘의균형활성화
 		}
 		x=23
 		y=1
@@ -118,7 +119,7 @@ focus_tree={
 				name=ger_radical_socialist_party
 			}
 		}
-		x=19
+		x=18
 		y=1
 		prerequisite={focus=ger_one}
 		mutually_exclusive={focus=ger_national_populist_root_start	focus=ger_market_liberal_root_start	focus=ger_paternal_autocrat_root_start}
@@ -202,7 +203,7 @@ focus_tree={
 			add_political_power = 30
 			add_stability=0.1
 		}
-		x=27
+		x=29
 		y=2
 		prerequisite = {focus=ger_national_populist_root_start}
 	}
@@ -217,7 +218,7 @@ focus_tree={
 			add_political_power = 10
 			add_stability = 0.125
 		}
-		x = 27
+		x = 29
 		y = 4
 		prerequisite = {focus=ger_national_populist_root_secount}
 	}
@@ -225,7 +226,7 @@ focus_tree={
 		id = ger_national_populist_root_three_one
 		icon = GFX_4
 		cost = 3
-		x = 26
+		x = 28
 		y = 3
 		ai_will_do = {
 			factor = 90
@@ -244,7 +245,7 @@ focus_tree={
 		id = ger_national_populist_root_four_one
 		icon = GFX_5
 		cost = 7
-		x = 26
+		x = 28
 		y = 5
 		ai_will_do = {
 			factor = 50
@@ -266,7 +267,7 @@ focus_tree={
 		id = ger_national_populist_root_four_two
 		icon = GFX_5
 		cost = 7
-		x = 28
+		x = 30
 		y = 5
 		ai_will_do = {
 			factor = 50
@@ -283,10 +284,10 @@ focus_tree={
 		mutually_exclusive = {focus = ger_national_populist_root_four_one}
 	}
 	focus = {	#세계로! #외교중점
-		id = ger_national_populist_root_five
-		icon = GFX_6
+		id = ger_to_wolud_root_start
+		icon = GFX_1
 		cost = 3
-		x = 30
+		x = 32
 		y = 10
 		ai_will_do = {
 			factor = 90
@@ -296,8 +297,28 @@ focus_tree={
 		}
 		prerequisite = {focus=ger_national_populist_root_four_one	focus=ger_national_populist_root_four_two}
 	}
-	focus = {
-		id = ger_social_democrat_root_start
+	focus = {	#중앙당주도 힘의 균형 중앙당
+		id = ger_maket_liberal_root_secount_two
+		icon = GFX_2
+		cost = 2
+		x = 24
+		y = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.07
+			}
+			##힘의 균형조정
+		}
+		prerequisite={focus=ger_market_liberal_root_start}
+		mutually_exclusive = {focus=ger_maket_liberal_root_secount_one}
+	}
+	focus = {	#사민당주도 힘의 균형 사민당으로
+		id = ger_maket_liberal_root_secount_one
 		icon = GFX_3
 		cost = 2
 		x = 22
@@ -306,15 +327,81 @@ focus_tree={
 			factor = 50
 		}
 		completion_reward = {
-			set_politics = {
-				ruling_party = social_democrat
-				elections_allowed = no
-				election_frequency = 48
-				long_name = ger_social_democrat_party_long_name
-				name = ger_social_democrat_party
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.07
 			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.04
+			}
+			##힘의 균형조정
 		}
 		prerequisite = {focus=ger_market_liberal_root_start}
+		mutually_exclusive = {focus=ger_maket_liberal_root_secount_two}
+	}
+	focus = {	#극단주의금지
+		id = ger_maket_liberal_root_thrre_one
+		icon = GFX_3
+		cost = 4
+		x = 22
+		y = 3
+		ai_will_do = {
+			factor = 65
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = redical_socialist
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.01
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = -0.1
+			}
+		}
+		prerequisite = {focus = ger_maket_liberal_root_secount_one focus = ger_maket_liberal_root_secount_two}
+	}
+	focus = {	#왕정주의 약화
+		id = ger_maket_liberal_root_thrre_two
+		icon = GFX_3
+		cost = 4
+		x = 24
+		y = 3
+		ai_will_do = {
+			factor = 35
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.1
+			}
+		}
+		prerequisite = {focus = ger_maket_liberal_root_secount_one focus = ger_maket_liberal_root_secount_two}
+	}
+	focus = {	#사회문제해결
+		id = ger_maket_liberal_root_four
+		icon = GFX_4
+		cost = 3
+		available = {
+			has_political_power >35
+		}
+		x = 23
+		y = 4
+		completion_reward = {
+			add_political_power = 15
+		}
+		prerequisite = {focus = ger_maket_liberal_root_thrre_one}
+		prerequisite = {focus = ger_maket_liberal_root_thrre_two}
 	}
 }
-continuous_focus_position={x=10	y=500}
+continuous_focus_position={x=10	y=100}
