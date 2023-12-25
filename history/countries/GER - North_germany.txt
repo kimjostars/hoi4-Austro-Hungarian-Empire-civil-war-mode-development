@@ -1,4 +1,6 @@
 capital=64
+
+add_ideas = victor_of_great_war_idea
 set_politics={
 	ruling_party=market_liberal
 	last_election="1933.3.5"
@@ -6,16 +8,16 @@ set_politics={
 	elections_allowed=yes
 }
 set_popularities={
-	social_democrat=30
-    social_liberal=5
-    national_populist=2
-    market_liberal=3
-    social_conservative=10
-    authoritarian_democrat=40
-    paternal_autocrat=2
-    radical_socialist=3
-    totalist=0
-    syndicalist=5
+	social_democrat=11
+    social_liberal=3
+    national_populist=17
+    market_liberal=19
+    social_conservative=4
+    authoritarian_democrat=11
+    paternal_autocrat=17
+    radical_socialist=13
+    totalist=1
+    syndicalist=4
 }
 set_party_name={
     ideology=social_democrat
