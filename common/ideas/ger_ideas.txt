@@ -3,25 +3,13 @@ ideas = {
 	country = {
 		victor_of_great_war_idea={
 			picture = GFX_1
-			allowed = {
-				original_tag = GER
-			}
 			allowed_civil_war = {
 			    always = no
 			}
-			##visible = {
-				##NOT = {
-					##has_completed_focus = 군대개혁중점
-				##}
-			##}
-			removal_cost = -1
 		}
 
 		country_caose={
 			picture = GFX_2
-			allowed = {
-				original_tag = GER
-			}
 			allowed_civil_war = {
 				always = no
 			}
