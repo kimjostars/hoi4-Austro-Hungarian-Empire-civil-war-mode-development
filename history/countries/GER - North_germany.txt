@@ -1,6 +1,12 @@
 capital=64
 
-add_ideas = victor_of_great_war_idea
+add_ideas = {
+    victor_of_great_war_idea
+}
+remove_ideas = {
+    sour_loser
+    GER_mefo_bills_1
+}
 set_politics={
 	ruling_party=market_liberal
 	last_election="1933.3.5"
