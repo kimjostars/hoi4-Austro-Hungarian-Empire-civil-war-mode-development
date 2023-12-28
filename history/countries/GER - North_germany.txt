@@ -6,6 +6,7 @@ add_ideas = {
 remove_ideas = {
     sour_loser
     GER_mefo_bills_1
+    general_staff
 }
 set_politics={
 	ruling_party=market_liberal
