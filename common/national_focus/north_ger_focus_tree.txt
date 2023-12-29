@@ -9,13 +9,12 @@ focus_tree={
 	}
 	default=no
 	focus={
-		id=ger_one
-		icon=GFX_1
+		id = ger_one
+		icon = ger_1936_boot_goal
 		cost=2
 		ai_will_do={
 			factor=100
 		}
-		available_if_capitulated=no
 		complete_reward={
 			add_political_power=10
 			country_event=north_ger.1
@@ -26,7 +25,7 @@ focus_tree={
 	focus={	#후견전제주의 재제작 필요 그로인해 비용늘림
 		id=ger_paternal_autocrat_root_start
 		icon=GFX_2
-		cost=100
+		cost=35
 		ai_will_do={
 			factor=100
 		}
@@ -75,8 +74,8 @@ focus_tree={
 		prerequisite={focus=ger_one}
 		mutually_exclusive={focus=ger_paternal_autocrat_root_start	focus=ger_market_liberal_root_start	focus=ger_radical_socialist_root_start}
 	}
-	focus={
-		id=ger_market_liberal_root_start
+	focus = {
+		id = ger_market_liberal_root_start
 		icon=GFX_2
 		cost=1
 		ai_will_do={
@@ -93,7 +92,17 @@ focus_tree={
 				long_name=ger_market_liberal_party_long_name
 				name=ger_market_liberal_party
 			}
-			##힘의균형활성화
+			if = {
+				limit={
+					has_dlc = "By Blood Alone"
+				}
+				set_power_balance = {
+					id = ger_maket_lideral_power_balance
+				}
+			}
+			else = {
+				add_political_power = 10
+			}
 		}
 		x=23
 		y=1
@@ -295,7 +304,7 @@ focus_tree={
 		completion_reward = {
 			add_political_power = 10
 		}
-		prerequisite = {focus=ger_national_populist_root_four_one	focus=ger_national_populist_root_four_two}
+		prerequisite = {focus=ger_national_populist_root_four_one	focus=ger_national_populist_root_four_two	focus = ger_maket_liberal_root_five_one	focus = ger_maket_liberal_root_five_two}
 	}
 	focus = {	#중앙당주도 힘의 균형 중앙당
 		id = ger_maket_liberal_root_secount_two
@@ -412,6 +421,13 @@ focus_tree={
 		ai_will_do = {
 			factor = 70
 		}
+		bypass = {
+			OR = {
+				has_war_with = ENG
+				has_war_with = FRA
+				has_war_with = ITA
+			}
+		}
 		completion_reward = {
 			add_political_power = 15
 			#서유럽와의 관계개선 국민정신추가예정
@@ -427,9 +443,20 @@ focus_tree={
 		ai_will_do = {
 			factor = 30
 		}
+		bypass = {
+			AND = {
+				has_war_with = SOV
+				has_war_with = POL
+				OR = {
+					has_war_with = LIT
+					has_war_with = LAT
+					has_war_with = EST
+				}
+			}
+		}
 		completion_reward = {
 			add_political_power = 15
-			#동유럽와의 관계개선 국민정신추가예정
+			#동유럽와의 관계개선 국민정신추가예정 외국이 수락한다면
 		}
 		prerequisite = {focus = ger_maket_liberal_root_four}
 	}
