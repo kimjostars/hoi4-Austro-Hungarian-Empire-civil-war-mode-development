@@ -1,0 +1,24 @@
+ger_maket_lideral_power_balance = {
+	initial_value = 0
+	left_side = ger_power_balance_maket_lideral_left_side
+	right_side = ger_power_balance_maket_lideral_right_side
+	decision_category = ger_bop
+	range = { 	#중간
+		id = mid_range 
+		min = -0.2 
+		max = 0.2 
+		modifier = { 
+			 
+		}	
+	}
+	side = {	#좌측
+		id = ger_power_balance_maket_lideral_left_side
+		icon = GFX_1
+		range = { }
+	}
+	side = {	#우측
+		id = ger_power_balance_maket_lideral_right_sid
+		icon = GFX_2
+		range = { }
+	}
+}
