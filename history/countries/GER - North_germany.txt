@@ -1,7 +1,9 @@
 capital=64
 
+oob = "GER"
 add_ideas = {
     victor_of_great_war_idea
+    ger_easton_poland_war
 }
 remove_ideas = {
     sour_loser
